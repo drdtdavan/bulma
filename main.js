@@ -21,12 +21,18 @@ setTimeout(getUsers, 5000);
 console.log(db);
 
 function getUsers() {
-    db.collection("users").get().then((querySnapshot) => {
+    db.collection("topics-Maths").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             console.log(`${doc.id} => ${doc.data()}`);
-            var el=document.createElement('div');
-            el.innerText=doc.data()['nickname'];
-            document.body.appendChild(el);
+            var cardHeader=document.createElement('div');                     
+            cardHeader.className="card header";
+            cardHeader.innerText=doc.data()['nickname'];
+            var cardContent=document.createElement('div');                     
+            cardContent.className="card content";
+            cardContent.innerText=doc.data()['body'];
+            var main=document.getElementsByTagName('main')[0];   
+            main.appendChild(cardHeader);
+            main.appendChild(cardContent);
         });
     });
 }
