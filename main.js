@@ -23,10 +23,15 @@ firebase
 setTimeout(getUsers, 5000);
 console.log(db);
 function createCard(data) {
-    console.table(data);
+  console.table(data);
   var card = document.createElement("div");
-  card.innerHTML =
-    `<div class='card header'><img class='avatar' src=${data.profileUrl}></div>`;
+  card.innerHTML = 
+  `<div class='card header'>
+    <img class='avatar' src=${data.profileUrl}>
+    <div><p class='card header nickname'>${data.nickname}</p>
+    <p class='card header school'>${data.school}</p>
+    </div>
+    </div>`;
   return card;
 }
 function getUsers() {

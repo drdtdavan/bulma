@@ -1,5 +1,3 @@
-
-
 footer {
     position: fixed;
     bottom: 0px;
@@ -28,28 +26,47 @@ footer {
     background: green;
     text-decoration: none;
 }
+
 /* card */
-.card {
-    
+
+.card.container {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    width: 40%;
-
+    width: 100%;
 }
 
 .card.header {
-    background-color: black;
-    color:white;
-    font-size: 2em
+    display: flex;
+    flex-direction: row;
+    background-color:#444444;
+    
 }
-.card.content{}
+
+p.card.header {
+    width: 100%;
+    margin: 0 0 0 5px;
+}
+
+.lb {
+    font-size: 30px;
+    
+}
+
+.m {
+    font-size: 20px;
+}
+p.card.header.m{ color: #cccccc;}
+p.card.header.lb{ color: #ffffff;}
+
 
 .avatar {
+   padding:5px;
     vertical-align: middle;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
-main{
+
+main {
     padding-bottom: 5em;
 }
