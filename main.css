@@ -1,72 +1,168 @@
-footer {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
 }
 
-.my-tabs {
-    display: flex;
-    flex-direction: row;
+#container {
+  display: flex; /* displays flex-items (children) inline */
+  flex-direction: column; /* stacks them vertically */
+  height: 100%;
 }
-
-.my-tab-button {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    border-radius: 4px;
-    font-family: Arial;
-    color: #ffffff;
-    font-size: 15px;
-    background: #3498db;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-}
-
-.my-tab-button:hover {
-    background: green;
-    text-decoration: none;
-}
-
-/* card */
-
-.card.container {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    width: 100%;
-}
-
-.card.header {
-    display: flex;
-    flex-direction: row;
-    background-color:#444444;
-    
-}
-
-p.card.header {
-    width: 100%;
-    margin: 0 0 0 5px;
-}
-
-.lb {
-    font-size: 30px;
-    
-}
-
-.m {
-    font-size: 20px;
-}
-p.card.header.m{ color: #cccccc;}
-p.card.header.lb{ color: #ffffff;}
-
-
-.avatar {
-   padding:5px;
-    vertical-align: middle;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+header {
+  background: #f88;
 }
 
 main {
-    padding-bottom: 5em;
+  flex: 1; /* takes the remaining height */
+  overflow: auto;
+  height: 100%; /* takes the visible area of the "main" div */
+  box-shadow: inset 0 1px 1px #000; /* just for demo */
+ 
 }
+footer {
+    display: flex;    
+  background: lightblue;
+}
+/*CARD*/
+.card.container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: beige;
+}
+.card.header {
+  display: flex;
+  flex-direction: row;
+  background-color: #444444;
+}
+
+p.card.header {
+  width: 100%;
+  margin: 0 0 0 5px;
+}
+
+.lb {
+  font-size: 30px;
+}
+
+.m {
+  font-size: 20px;
+}
+
+p.card.header.m {
+  color: #cccccc;
+}
+
+p.card.header.lb {
+  color: #ffffff;
+}
+.avatar {
+  padding: 5px;
+  vertical-align: middle;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+p.card.title {
+  margin:2px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .card.body {
+  
+  }
+  div.card.body>img{width:100%}
+  
+  
+  .card.footer {
+    display: flex;    
+  }
+  hr{width: 80%;margin-top: 10px;margin-bottom: 10px;}
+  span{color:lightgray}
+  button{
+    color: #ffffff;     
+    flex-grow: 1; 
+    display:flex;
+    flex-direction: column;
+    align-items: center;    
+  }
+  button.reply {   
+    background: gray;  
+    
+  }
+  button.comments {   
+    background: gray;    
+  
+  }
+  button.home {   
+    background: darkblue;    
+  }
+  button.askquestion {   
+    background: darkgreen;    
+  }
+  button.theory {   
+    background: purple;    
+  }
+  button.menu {   
+    background: darkorange;    
+  }
+  
+  
+  
+  .icon-reply {
+    width: 20px;
+    height: 20px;
+    background-image: url("./reply.svg");
+    background-repeat: no-repeat;  
+  }
+  .icon-comments {
+    width: 20px;
+    height: 20px;
+    background-image: url("./comments.svg");
+    background-repeat: no-repeat;  
+  }
+  .icon-home {
+    width: 20px;
+    height: 20px;
+    background-image: url("./home.svg");
+    background-repeat: no-repeat;  
+  }
+  .icon-edit {
+    width: 20px;
+    height: 20px;
+    background-image: url("./edit.svg");
+    background-repeat: no-repeat;  
+  }
+  .icon-theory {
+    width: 20px;
+    height: 20px;
+    background-image: url("./theory.svg");
+    background-repeat: no-repeat;  
+  }
+  .icon-askquestion {
+    width: 20px;
+    height: 20px;
+    background-image: url("./askquestion.svg");
+    background-repeat: no-repeat;  
+  }
+  .icon-menu {
+    width: 20px;
+    height: 20px;
+    background-image: url("./menu.svg");
+    background-repeat: no-repeat;  
+  }
+
+/* FOOTER */
+button.my-tab-button {
+    flex-grow: 1;
+  
+    color: #ffffff;
+  
+    background: #3498db;
+  }
