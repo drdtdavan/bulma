@@ -159,10 +159,4 @@ p.card.title {
   }
 
 /* FOOTER */
-button.my-tab-button {
-    flex-grow: 1;
-  
-    color: #ffffff;
-  
-    background: #3498db;
-  }
+
