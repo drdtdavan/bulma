@@ -1,6 +1,16 @@
+:root {
+  --container-bg: #fafafa;
+  --main-bg: #fefefe;
+  --card-container-bg: #fefefe;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
+
+
 html,
 body {
   margin: 0;
@@ -8,35 +18,47 @@ body {
 }
 
 #container {
-  display: flex; /* displays flex-items (children) inline */
-  flex-direction: column; /* stacks them vertically */
+  background-color: var(--container-bg);
+  display: flex;
+  /* displays flex-items (children) inline */
+  flex-direction: column;
+  /* stacks them vertically */
   height: 100%;
-}
-header {
-  background: #f88;
 }
 
 main {
-  flex: 1; /* takes the remaining height */
+  flex: 1;
+  /* takes the remaining height */
   overflow: auto;
-  height: 100%; /* takes the visible area of the "main" div */
-  box-shadow: inset 0 1px 1px #000; /* just for demo */
- 
+  height: 100%;
+  /* takes the visible area of the "main" div */
+  box-shadow: inset 0 1px 1px #000;
+  /* just for demo */
 }
+
 footer {
-    display: flex;    
-  background: lightblue;
+  display: flex;
 }
+
 /*CARD*/
+
 .card.container {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  background-color: beige;
+  margin: 10px;
+  border-radius: 2px;
+  width: calc(100% - 20px);
+  font-size: 1.1rem;
+  background: var(--card-container-bg);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }
-.card.header {
+
+
+
+
+div.card.header {
   display: flex;
   flex-direction: row;
-  background-color: #444444;
+  background-color: inherit;
+  
 }
 
 p.card.header {
@@ -45,20 +67,21 @@ p.card.header {
 }
 
 .lb {
-  font-size: 30px;
+  font-size: 1.5rem;
 }
 
 .m {
-  font-size: 20px;
+  font-size: 14px;
 }
 
 p.card.header.m {
-  color: #cccccc;
+  color: #333;
 }
 
 p.card.header.lb {
-  color: #ffffff;
+  color: #000;
 }
+
 .avatar {
   padding: 5px;
   vertical-align: middle;
@@ -68,95 +91,114 @@ p.card.header.lb {
 }
 
 p.card.title {
-  margin:2px;
-    font-size: 20px;
-    text-align: center;
-    font-weight: 600;
-  }
+  border-top: 1px solid lightgray;
+  background-color: inherit;
+  font-size: 1.2rem;
+  text-align: center;
   
-  .card.body {
+}
+
+div.card.body {
+  margin: 0px;  
+  border-bottom: 1px solid lightgray;
   
-  }
-  div.card.body>img{width:100%}
-  
-  
-  .card.footer {
-    display: flex;    
-  }
-  hr{width: 80%;margin-top: 10px;margin-bottom: 10px;}
-  span{color:lightgray}
-  button{
-    color: #ffffff;     
-    flex-grow: 1; 
-    display:flex;
-    flex-direction: column;
-    align-items: center;    
-  }
-  button.reply {   
-    background: gray;  
-    
-  }
-  button.comments {   
-    background: gray;    
-  
-  }
-  button.home {   
-    background: darkblue;    
-  }
-  button.askquestion {   
-    background: darkgreen;    
-  }
-  button.theory {   
-    background: purple;    
-  }
-  button.menu {   
-    background: darkorange;    
-  }
-  
-  
-  
-  .icon-reply {
-    width: 20px;
-    height: 20px;
-    background-image: url("./reply.svg");
-    background-repeat: no-repeat;  
-  }
-  .icon-comments {
-    width: 20px;
-    height: 20px;
-    background-image: url("./comments.svg");
-    background-repeat: no-repeat;  
-  }
-  .icon-home {
-    width: 20px;
-    height: 20px;
-    background-image: url("./home.svg");
-    background-repeat: no-repeat;  
-  }
-  .icon-edit {
-    width: 20px;
-    height: 20px;
-    background-image: url("./edit.svg");
-    background-repeat: no-repeat;  
-  }
-  .icon-theory {
-    width: 20px;
-    height: 20px;
-    background-image: url("./theory.svg");
-    background-repeat: no-repeat;  
-  }
-  .icon-askquestion {
-    width: 20px;
-    height: 20px;
-    background-image: url("./askquestion.svg");
-    background-repeat: no-repeat;  
-  }
-  .icon-menu {
-    width: 20px;
-    height: 20px;
-    background-image: url("./menu.svg");
-    background-repeat: no-repeat;  
-  }
+  padding:  15px 5px 15px 5px;
+}
+
+div.card.body>img {
+  width: 100%
+}
+
+.card.footer {
+  display: flex;
+}
+
+span {
+  color: lightgray
+}
+
+button {
+  border:0px;
+  color: #ffffff;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button.reply {
+  background: #fff;
+color:blue;
+}
+
+button.comments {
+  background: #fff;
+  color:blue;
+}
+
+button.home {
+  background: darkblue;
+}
+
+button.askquestion {
+  background: darkgreen;
+}
+
+button.theory {
+  background: purple;
+}
+
+button.menu {
+  background: darkorange;
+}
+
+.icon-reply {
+  width: 20px;
+  height: 20px;
+  background-image: url("./reply.svg");
+  background-repeat: no-repeat;
+}
+
+.icon-comments {
+  width: 20px;
+  height: 20px;
+  background-image: url("./comments.svg");
+  background-repeat: no-repeat;
+}
+
+.icon-home {
+  width: 20px;
+  height: 20px;
+  background-image: url("./home.svg");
+  background-repeat: no-repeat;
+}
+
+.icon-edit {
+  width: 20px;
+  height: 20px;
+  background-image: url("./edit.svg");
+  background-repeat: no-repeat;
+}
+
+.icon-theory {
+  width: 20px;
+  height: 20px;
+  background-image: url("./theory.svg");
+  background-repeat: no-repeat;
+}
+
+.icon-askquestion {
+  width: 20px;
+  height: 20px;
+  background-image: url("./askquestion.svg");
+  background-repeat: no-repeat;
+}
+
+.icon-menu {
+  width: 20px;
+  height: 20px;
+  background-image: url("./menu.svg");
+  background-repeat: no-repeat;
+}
 
 /* FOOTER */
-
